@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="new_schemaDataSet" targetNamespace="http://tempuri.org/new_schemaDataSet.xsd" xmlns:mstns="http://tempuri.org/new_schemaDataSet.xsd" xmlns="http://tempuri.org/new_schemaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="new_schemaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="new_schemaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Banco.Properties.Settings.GlobalReference.Default.new_schemaConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cursoTableAdapter" GeneratorDataComponentClassName="cursoTableAdapter" Name="curso" UserDataComponentName="cursoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="new_schemaConnectionString (Settings)" DbObjectName="new_schema.curso" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `IdDisc`, `NomeCurso` FROM `curso`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="matTableAdapter" GeneratorDataComponentClassName="matTableAdapter" Name="mat" UserDataComponentName="matTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="new_schemaConnectionString (Settings)" DbObjectName="new_schema.mat" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `IdMat`, `DiaSemana`, `Horario`, `NomeMat`, `fk_Prof_Matricula` FROM `mat`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="possuiTableAdapter" GeneratorDataComponentClassName="possuiTableAdapter" Name="possui" UserDataComponentName="possuiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="new_schemaConnectionString (Settings)" DbObjectName="new_schema.possui" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `fk_Curso_IdDisc`, `fk_Mat_IdMat` FROM `possui`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="profTableAdapter" GeneratorDataComponentClassName="profTableAdapter" Name="prof" UserDataComponentName="profTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="new_schemaConnectionString (Settings)" DbObjectName="new_schema.prof" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Matricula`, `NomeProf`, `Salario` FROM `prof`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="new_schemaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="new_schemaDataSet" msprop:Generator_UserDSName="new_schemaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="curso" msprop:Generator_TableClassName="cursoDataTable" msprop:Generator_TableVarName="tablecurso" msprop:Generator_TablePropName="curso" msprop:Generator_RowDeletingName="cursoRowDeleting" msprop:Generator_RowChangingName="cursoRowChanging" msprop:Generator_RowEvHandlerName="cursoRowChangeEventHandler" msprop:Generator_RowDeletedName="cursoRowDeleted" msprop:Generator_UserTableName="curso" msprop:Generator_RowChangedName="cursoRowChanged" msprop:Generator_RowEvArgName="cursoRowChangeEvent" msprop:Generator_RowClassName="cursoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mat" msprop:Generator_TableClassName="matDataTable" msprop:Generator_TableVarName="tablemat" msprop:Generator_TablePropName="mat" msprop:Generator_RowDeletingName="matRowDeleting" msprop:Generator_RowChangingName="matRowChanging" msprop:Generator_RowEvHandlerName="matRowChangeEventHandler" msprop:Generator_RowDeletedName="matRowDeleted" msprop:Generator_UserTableName="mat" msprop:Generator_RowChangedName="matRowChanged" msprop:Generator_RowEvArgName="matRowChangeEvent" msprop:Generator_RowClassName="matRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="possui" msprop:Generator_TableClassName="possuiDataTable" msprop:Generator_TableVarName="tablepossui" msprop:Generator_TablePropName="possui" msprop:Generator_RowDeletingName="possuiRowDeleting" msprop:Generator_RowChangingName="possuiRowChanging" msprop:Generator_RowEvHandlerName="possuiRowChangeEventHandler" msprop:Generator_RowDeletedName="possuiRowDeleted" msprop:Generator_UserTableName="possui" msprop:Generator_RowChangedName="possuiRowChanged" msprop:Generator_RowEvArgName="possuiRowChangeEvent" msprop:Generator_RowClassName="possuiRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prof" msprop:Generator_TableClassName="profDataTable" msprop:Generator_TableVarName="tableprof" msprop:Generator_TablePropName="prof" msprop:Generator_RowDeletingName="profRowDeleting" msprop:Generator_RowChangingName="profRowChanging" msprop:Generator_RowEvHandlerName="profRowChangeEventHandler" msprop:Generator_RowDeletedName="profRowDeleted" msprop:Generator_UserTableName="prof" msprop:Generator_RowChangedName="profRowChanged" msprop:Generator_RowEvArgName="profRowChangeEvent" msprop:Generator_RowClassName="profRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
